@@ -1,0 +1,14 @@
+version: '3.6'
+services:
+  deb_test:
+    build:
+      context: ./build
+      args:
+        - BASE_IMAGE=debian:latest
+        - EXTRA_INSTALLS=openjdk-8-jre-headless jq
+    container_name: deb-test
+    image: deb_test_image
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./build/deb-files:/opt
