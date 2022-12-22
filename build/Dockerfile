@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=debian:latest
+ARG BASE_IMAGE=debian:bullseye
 FROM $BASE_IMAGE
 
 ARG EXTRA_INSTALLS=''
